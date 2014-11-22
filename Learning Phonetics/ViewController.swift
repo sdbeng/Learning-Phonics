@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         //TODO: text recording in progress
         
         //TODO: record the user's voice
-        println("print record audio in progress...")
+        println("Recording audio in progress...")
         
         recordingLabel.hidden = false
     }
