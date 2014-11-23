@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
         //recordingLabel hidden by default, only enabled when record button is pressed
         recordingLabel.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
