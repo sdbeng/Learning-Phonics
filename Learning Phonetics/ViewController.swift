@@ -9,8 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //outlets
+    @IBOutlet weak var recordingLabel: UILabel!
 
     @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var recordButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +24,16 @@ class ViewController: UIViewController {
         
         //recordingLabel hidden by default, only enabled when record button is pressed
         recordingLabel.hidden = true
+                
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         //when launch makes the stop button hide
         stopButton.hidden = true
         
+        //enable recordButton again to let user start a new recording session
+        recordButton.enabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,9 +51,12 @@ class ViewController: UIViewController {
         recordingLabel.hidden = false
         //show stop button when recording audio action starts!
         stopButton.hidden = false
+        
+        //hide recordButton to avoid user accidentally press it more than once (the enable it on viewWillAppear)
+        recordButton.enabled = false
     }
 
-    @IBOutlet weak var recordingLabel: UILabel!
+    
     
     
     @IBAction func stopRecording(sender: UIButton) {
