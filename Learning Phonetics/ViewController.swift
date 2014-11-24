@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stopButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //recordingLabel hidden by default, only enabled when record button is pressed
         recordingLabel.hidden = true
+        
+        //when launch makes the stop button hide
+        stopButton.hidden = true
         
     }
 
@@ -32,6 +37,8 @@ class ViewController: UIViewController {
         println("Recording audio in progress...")
         
         recordingLabel.hidden = false
+        //show stop button when recording audio action starts!
+        stopButton.hidden = false
     }
 
     @IBOutlet weak var recordingLabel: UILabel!

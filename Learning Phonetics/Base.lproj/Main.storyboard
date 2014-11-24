@@ -86,6 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="recordingLabel" destination="n2F-DG-KyK" id="vop-u6-fmU"/>
+                        <outlet property="stopButton" destination="XLa-6G-Urs" id="Vin-pW-m7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
