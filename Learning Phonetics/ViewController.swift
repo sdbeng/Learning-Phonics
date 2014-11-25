@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     @IBAction func stopRecording(sender: UIButton) {
         recordingLabel.hidden = true
         
-        println("I stopped recording!")
+        //println("I stopped recording!")
     }
     
     

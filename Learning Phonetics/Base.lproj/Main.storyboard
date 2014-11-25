@@ -25,31 +25,68 @@
                                     <action selector="slowRecording:" destination="W4V-al-6ey" eventType="touchUpInside" id="tbU-wh-5TY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGD-JT-n3s">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPlaybacksButton:" destination="W4V-al-6ey" eventType="touchUpInside" id="FLC-Yu-SOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPe-VE-NDE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fast-rabittbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fastPlayback:" destination="W4V-al-6ey" eventType="touchUpInside" id="Icj-2Z-ccI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HGD-JT-n3s" firstAttribute="centerX" secondItem="Vi7-16-zYA" secondAttribute="centerX" id="0gU-4e-Ehh"/>
                             <constraint firstItem="bKE-Sy-ZZH" firstAttribute="leading" secondItem="Vi7-16-zYA" secondAttribute="leadingMargin" constant="16" id="1T4-Pv-ujC"/>
+                            <constraint firstItem="FPe-VE-NDE" firstAttribute="top" secondItem="Suv-Tc-2Fb" secondAttribute="bottom" constant="32" id="9d3-Ri-RK5"/>
                             <constraint firstItem="bKE-Sy-ZZH" firstAttribute="top" secondItem="Suv-Tc-2Fb" secondAttribute="bottom" constant="32" id="F5W-RF-jqq"/>
+                            <constraint firstItem="J58-ek-SoY" firstAttribute="top" secondItem="HGD-JT-n3s" secondAttribute="bottom" constant="67" id="dp4-wn-62e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPe-VE-NDE" secondAttribute="trailing" constant="16" id="nIG-JJ-zIJ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="bKE-Sy-ZZH"/>
+                                <exclude reference="HGD-JT-n3s"/>
+                                <exclude reference="FPe-VE-NDE"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1T4-Pv-ujC"/>
                                 <exclude reference="F5W-RF-jqq"/>
+                                <exclude reference="9d3-Ri-RK5"/>
+                                <exclude reference="nIG-JJ-zIJ"/>
+                                <exclude reference="0gU-4e-Ehh"/>
+                                <exclude reference="dp4-wn-62e"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bKE-Sy-ZZH"/>
+                                <include reference="HGD-JT-n3s"/>
+                                <include reference="FPe-VE-NDE"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="1T4-Pv-ujC"/>
                                 <include reference="F5W-RF-jqq"/>
+                                <include reference="9d3-Ri-RK5"/>
+                                <include reference="nIG-JJ-zIJ"/>
+                                <include reference="0gU-4e-Ehh"/>
+                                <include reference="dp4-wn-62e"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="stopPlaybackButton" destination="HGD-JT-n3s" id="XWJ-KQ-Wzr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lcw-XC-Dtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,6 +204,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast-rabittbutton" width="100" height="100"/>
         <image name="mic" width="100" height="100"/>
         <image name="snailbutton" width="100" height="100"/>
         <image name="stopbutton" width="50" height="50"/>

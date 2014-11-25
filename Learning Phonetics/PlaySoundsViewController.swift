@@ -13,6 +13,9 @@ class PlaySoundsViewController: UIViewController {
     
     //outlets
     
+    @IBOutlet weak var stopPlaybackButton: UIButton!
+    
+    
     //Need to declare audioPlayer variable globally so I can use it inside function slowRecording. OJO!
     var audioPlayer = AVAudioPlayer()
     
@@ -63,8 +66,9 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //This should be called slowPlayback, keep it in mind for a production stage
     @IBAction func slowRecording(sender: UIButton) {
-        println("Pressed slow recording file button (snail)...")
+        //println("Pressed slow recording file button (snail)...")
         
         //it's a good practice to always stop the playback before playing
         audioPlayer.stop()
@@ -72,7 +76,33 @@ class PlaySoundsViewController: UIViewController {
         //Here I change rate before play audio - ranges from 0.5 to 2.0 (double playback)
         audioPlayer.rate = 0.5
         
+        //another good practice to avoid playback overlaps, is set the currentTime to zero(0)
+        audioPlayer.currentTime = 0.0
+        
         audioPlayer.play()
+    }
+    
+    
+    //fast action button here
+    
+    @IBAction func fastPlayback(sender: UIButton) {
+        println("Pressed fast recording button (rabbit)...")
+        
+        audioPlayer.stop()
+        //play audio at a fast rate
+        audioPlayer.rate = 1.5
+        
+        //another good practice to avoid playback overlaps, is set the currentTime to zero(0)
+        audioPlayer.currentTime = 0.0
+        
+        audioPlayer.play()
+    }
+    
+    //Stop all audio playbacks
+    @IBAction func stopPlaybacksButton(sender: UIButton) {
+        
+        println("I stopped playback!")
+        audioPlayer.stop()
     }
     
 
