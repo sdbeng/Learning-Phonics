@@ -68,40 +68,42 @@ class PlaySoundsViewController: UIViewController {
     
     //This should be called slowPlayback, keep it in mind for a production stage
     @IBAction func slowRecording(sender: UIButton) {
-        //println("Pressed slow recording file button (snail)...")
+        println("Playing slow recording snail file button...")
         
-        //it's a good practice to always stop the playback before playing
-        audioPlayer.stop()
+        helperdry()
         
         //Here I change rate before play audio - ranges from 0.5 to 2.0 (double playback)
         audioPlayer.rate = 0.5
         
-        //another good practice to avoid playback overlaps, is set the currentTime to zero(0)
-        audioPlayer.currentTime = 0.0
-        
-        audioPlayer.play()
     }
     
     
     //fast action button here
     
     @IBAction func fastPlayback(sender: UIButton) {
-        println("Pressed fast recording button (rabbit)...")
+        println("Playing fast recording rabbit button...")
         
-        audioPlayer.stop()
-        //play audio at a fast rate
+        helperdry()
+        
         audioPlayer.rate = 1.5
+       
+    }
+    
+    //To avoid DRY, I can create a helper function to include all the repeatable code, like
+    func helperdry() {
+        //it's a good practice to always stop the playback before playing
+        audioPlayer.stop()
         
         //another good practice to avoid playback overlaps, is set the currentTime to zero(0)
         audioPlayer.currentTime = 0.0
-        
         audioPlayer.play()
+        
     }
     
     //Stop all audio playbacks
     @IBAction func stopPlaybacksButton(sender: UIButton) {
         
-        println("I stopped playback!")
+        println("I stopped all playbacks!")
         audioPlayer.stop()
     }
     
