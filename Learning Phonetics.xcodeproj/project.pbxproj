@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F96BBABD1A1FC1BE005EC9A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBABC1A1FC1BE005EC9A4 /* AppDelegate.swift */; };
-		F96BBABF1A1FC1BE005EC9A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBABE1A1FC1BE005EC9A4 /* ViewController.swift */; };
 		F96BBAC21A1FC1BF005EC9A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96BBAC01A1FC1BF005EC9A4 /* Main.storyboard */; };
 		F96BBAC41A1FC1BF005EC9A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96BBAC31A1FC1BF005EC9A4 /* Images.xcassets */; };
 		F96BBAC71A1FC1BF005EC9A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F96BBAC51A1FC1BF005EC9A4 /* LaunchScreen.xib */; };
 		F96BBAD31A1FC1BF005EC9A4 /* Learning_PhoneticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBAD21A1FC1BF005EC9A4 /* Learning_PhoneticsTests.swift */; };
 		F96BBADD1A23E083005EC9A4 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBADC1A23E083005EC9A4 /* PlaySoundsViewController.swift */; };
 		F96BBADF1A23FF31005EC9A4 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F96BBADE1A23FF31005EC9A4 /* movie_quote.mp3 */; };
+		F96BBAE11A252FE5005EC9A4 /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBAE01A252FE5005EC9A4 /* RecordSoundViewController.swift */; };
+		F96BBAE31A256D0E005EC9A4 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96BBAE21A256D0D005EC9A4 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,6 @@
 		F96BBAB71A1FC1BD005EC9A4 /* Learning Phonetics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning Phonetics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96BBABB1A1FC1BE005EC9A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96BBABC1A1FC1BE005EC9A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F96BBABE1A1FC1BE005EC9A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F96BBAC11A1FC1BF005EC9A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F96BBAC31A1FC1BF005EC9A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F96BBAC61A1FC1BF005EC9A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 		F96BBAD21A1FC1BF005EC9A4 /* Learning_PhoneticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_PhoneticsTests.swift; sourceTree = "<group>"; };
 		F96BBADC1A23E083005EC9A4 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		F96BBADE1A23FF31005EC9A4 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
+		F96BBAE01A252FE5005EC9A4 /* RecordSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundViewController.swift; sourceTree = "<group>"; };
+		F96BBAE21A256D0D005EC9A4 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				F96BBABC1A1FC1BE005EC9A4 /* AppDelegate.swift */,
-				F96BBABE1A1FC1BE005EC9A4 /* ViewController.swift */,
+				F96BBAE01A252FE5005EC9A4 /* RecordSoundViewController.swift */,
+				F96BBAE21A256D0D005EC9A4 /* RecordedAudio.swift */,
 				F96BBAC01A1FC1BF005EC9A4 /* Main.storyboard */,
 				F96BBADC1A23E083005EC9A4 /* PlaySoundsViewController.swift */,
 				F96BBAC31A1FC1BF005EC9A4 /* Images.xcassets */,
@@ -219,7 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F96BBABF1A1FC1BE005EC9A4 /* ViewController.swift in Sources */,
+				F96BBAE31A256D0E005EC9A4 /* RecordedAudio.swift in Sources */,
+				F96BBAE11A252FE5005EC9A4 /* RecordSoundViewController.swift in Sources */,
 				F96BBADD1A23E083005EC9A4 /* PlaySoundsViewController.swift in Sources */,
 				F96BBABD1A1FC1BE005EC9A4 /* AppDelegate.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				F96BBAD81A1FC1BF005EC9A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F96BBAD91A1FC1BF005EC9A4 /* Build configuration list for PBXNativeTarget "Learning PhoneticsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				F96BBADB1A1FC1BF005EC9A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

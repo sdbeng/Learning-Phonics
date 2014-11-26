@@ -2,7 +2,7 @@
 //  PlaySoundsViewController.swift
 //  Learning Phonetics
 //
-//  Created by admin 33 on 11/24/14.
+//  Created by Serg on 11/24/14.
 //  Copyright (c) 2014 sdbwebsolutions. All rights reserved.
 //
 
