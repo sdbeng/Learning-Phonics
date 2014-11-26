@@ -21,7 +21,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     //Declared Globally
     var audioRecorder:AVAudioRecorder!
     
-    
+    //Create a new object for this RecordedAudio
+    var recordedAudio: RecordedAudio!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,9 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         //the title of that file>> title: String!
         //and the path where to store it on the phone>> recordingFilePath: NSURL!
         //i'll do it by creating a new class called: RecordedAudio (this is the app model)
+        
+        //Initialize the new object
+        recordedAudio = RecordedAudio()
         
         //TODO: step 2 move to the 2nd scene of the app and perform a segue
     }
