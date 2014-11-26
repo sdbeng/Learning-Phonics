@@ -144,7 +144,16 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         if(segue.identifier == "showRecordings"){
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
             
+            //retrieve the data
+            let data = sender as RecordedAudio
+            
+            //Note: Now I need to pass the constant data to playSoundsVC, but first go to PlaySoundsViewController and declare a new variable called: receivedAudio
+            //
+            
+            //Now, you can pass the data in this manner
+            playSoundsVC.receivedAudio = data
         }
         
         // Pass the selected object to the new view controller.

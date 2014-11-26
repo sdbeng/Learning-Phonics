@@ -45,6 +45,15 @@
                                     <action selector="fastPlayback:" destination="W4V-al-6ey" eventType="touchUpInside" id="Icj-2Z-ccI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4a-b3-FCi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunkbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="W4V-al-6ey" eventType="touchUpInside" id="6gy-W0-lpn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,22 +61,27 @@
                             <constraint firstItem="bKE-Sy-ZZH" firstAttribute="leading" secondItem="Vi7-16-zYA" secondAttribute="leadingMargin" constant="16" id="1T4-Pv-ujC"/>
                             <constraint firstItem="FPe-VE-NDE" firstAttribute="top" secondItem="Suv-Tc-2Fb" secondAttribute="bottom" constant="32" id="9d3-Ri-RK5"/>
                             <constraint firstItem="bKE-Sy-ZZH" firstAttribute="top" secondItem="Suv-Tc-2Fb" secondAttribute="bottom" constant="32" id="F5W-RF-jqq"/>
+                            <constraint firstItem="u4a-b3-FCi" firstAttribute="leading" secondItem="bKE-Sy-ZZH" secondAttribute="leading" id="L8B-YE-b38"/>
                             <constraint firstItem="J58-ek-SoY" firstAttribute="top" secondItem="HGD-JT-n3s" secondAttribute="bottom" constant="67" id="dp4-wn-62e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FPe-VE-NDE" secondAttribute="trailing" constant="16" id="nIG-JJ-zIJ"/>
+                            <constraint firstItem="u4a-b3-FCi" firstAttribute="top" secondItem="bKE-Sy-ZZH" secondAttribute="bottom" constant="55" id="y0U-nI-ntu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="bKE-Sy-ZZH"/>
                                 <exclude reference="HGD-JT-n3s"/>
                                 <exclude reference="FPe-VE-NDE"/>
+                                <exclude reference="u4a-b3-FCi"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="dp4-wn-62e"/>
+                                <exclude reference="1T4-Pv-ujC"/>
+                                <exclude reference="F5W-RF-jqq"/>
+                                <exclude reference="L8B-YE-b38"/>
+                                <exclude reference="y0U-nI-ntu"/>
                                 <exclude reference="9d3-Ri-RK5"/>
                                 <exclude reference="nIG-JJ-zIJ"/>
                                 <exclude reference="0gU-4e-Ehh"/>
-                                <exclude reference="1T4-Pv-ujC"/>
-                                <exclude reference="F5W-RF-jqq"/>
+                                <exclude reference="dp4-wn-62e"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -75,14 +89,17 @@
                                 <include reference="bKE-Sy-ZZH"/>
                                 <include reference="HGD-JT-n3s"/>
                                 <include reference="FPe-VE-NDE"/>
+                                <include reference="u4a-b3-FCi"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="dp4-wn-62e"/>
+                                <include reference="1T4-Pv-ujC"/>
+                                <include reference="F5W-RF-jqq"/>
+                                <include reference="L8B-YE-b38"/>
+                                <include reference="y0U-nI-ntu"/>
                                 <include reference="9d3-Ri-RK5"/>
                                 <include reference="nIG-JJ-zIJ"/>
                                 <include reference="0gU-4e-Ehh"/>
-                                <include reference="1T4-Pv-ujC"/>
-                                <include reference="F5W-RF-jqq"/>
+                                <include reference="dp4-wn-62e"/>
                             </mask>
                         </variation>
                     </view>
@@ -206,6 +223,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunkbutton" width="100" height="100"/>
         <image name="fast-rabittbutton" width="100" height="100"/>
         <image name="mic" width="100" height="100"/>
         <image name="snailbutton" width="100" height="100"/>
