@@ -105,33 +105,52 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         audioSession.setActive(false, error: nil)
     }
 
-    func performSegue() {
-        
-    }
     
     //This function will be invoked when the audio has finished recording
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-        //TODO: step1 save the recorded audio
+        //TODO: step1- save the recorded audio
         //I'm looking to save 2 things about the recorded audio:
         //the title of that file>> title: String!
         //and the path where to store it on the phone>> recordingFilePath: NSURL!
         //i'll do it by creating a new class called: RecordedAudio (this is the app model)
         
-        //Initialize the new object
-        recordedAudio = RecordedAudio()
+        if(flag) {
+            //Initialize the new object
+            recordedAudio = RecordedAudio()
+            
+            //Now I can set the attributes of the recordedAudio object: we get values from the recorder param.
+            recordedAudio.filePathUrl = recorder.url
+            
+            //Then will set the title of this recorded audio obj: this give us the name of the recorded file
+            recordedAudio.title = recorder.url.lastPathComponent
+            
+            //TODO: step 2- move to the 2nd scene of the app and perform a segue with peformSegueWithIdentifier method
+            //Note:recorderAudio is the obj that initiates the segue (sender)
+            self.performSegueWithIdentifier("showRecordings", sender: recordedAudio)
+        }else {
+            println("Recording was not succesfull!")
+            recordButton.enabled = true
+            stopButton.hidden = true
+        }
         
-        //TODO: step 2 move to the 2nd scene of the app and perform a segue
+        
+
     }
 
-    /*
-    // MARK: - Navigation
+  
+    // MARK: - Navigation and passind data to next scene (recorded audio data)
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        if(segue.identifier == "showRecordings"){
+            
+        }
+        
         // Pass the selected object to the new view controller.
+        
     }
-    */
+   
 
 }
 
